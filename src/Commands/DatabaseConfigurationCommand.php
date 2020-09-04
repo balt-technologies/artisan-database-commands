@@ -8,15 +8,15 @@ class DatabaseConfigurationCommand extends Command
 
     protected $description = 'Show all configurations for current environment';
 
-
-    /**
-     * Execute the console command.
-     *
-     * @return mixed
-     */
     public function handle()
     {
-        $this->info('test');
-    }
+        $connections = config('database.connections');
 
+        $connectionKeys = array_keys($connections);
+
+        $connection = $this->choice('Which connection you want to see?', $connectionKeys);
+
+        $this->info('You choosed: '. $connection);
+
+    }
 }
