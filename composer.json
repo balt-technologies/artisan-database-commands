@@ -1,0 +1,32 @@
+{
+    "name": "balt-technologies/artisan-database-commands",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobias Redmann",
+            "email": "tobias.redmann@balt.de"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Balt\\": ["src/"]
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Balt\\Providers\\DatabaseCommandsServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.2.5"
+        }
+    },
+    "require-dev": {
+        "laravel/framework": "^7.0"
+    }
+}
