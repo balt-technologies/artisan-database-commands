@@ -12,7 +12,7 @@ class DatabaseCommandsServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->commands([
-
+                \DatabaseConfigurationCommand::class
             ]);
         }
 
