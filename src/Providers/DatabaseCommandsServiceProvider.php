@@ -2,6 +2,7 @@
 
 namespace Balt\Providers;
 
+use Balt\Commands\DatabaseConfigurationCommand;
 use Illuminate\Support\ServiceProvider;
 
 class DatabaseCommandsServiceProvider extends ServiceProvider
@@ -12,7 +13,7 @@ class DatabaseCommandsServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->commands([
-                \DatabaseConfigurationCommand::class
+                DatabaseConfigurationCommand::class
             ]);
         }
 
